@@ -19,8 +19,8 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>Url shortener</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Projeto realizado consumindo uma API de encutador de links, para
+              encurtar links muito grandes.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
@@ -47,8 +47,8 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>Github finder</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Projeto realizado consumindo a API do github, para encontrar
+              usúarios e seus repositórios.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
@@ -73,10 +73,10 @@ export const Projects = () => {
         <S.ProjectCardAndImage>
           <S.ProjectImage src={gitFinderReact} />
           <S.ProjectCard>
-            <S.ProjectName>Github finder com React</S.ProjectName>
+            <S.ProjectName>Github finder - com React</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Projeto realizado consumindo a API do github, para encontrar
+              usúarios e seus repositórios.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> ReactJs e Css modules.
@@ -103,8 +103,8 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>laslessVPN</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Um site de aonde o usúario pode pegar informações da laslessVPN,
+              escolher planos, ver recomendações, etc.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
@@ -131,8 +131,8 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>Rest Countries</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Projeto realizado consumindo uma REST API de países, aonde o
+              usúario pode obter diversas informações dos países.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
@@ -157,10 +157,10 @@ export const Projects = () => {
         <S.ProjectCardAndImage>
           <S.ProjectImage src={react_countries} />
           <S.ProjectCard>
-            <S.ProjectName>Rest Countries com React</S.ProjectName>
+            <S.ProjectName>Rest Countries - com React</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Projeto realizado consumindo uma REST API de países, aonde o
+              usúario pode obter diversas informações dos países.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> ReactJs e Styled-components
@@ -188,8 +188,8 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>To-do</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Um aplicativo aonde o usúario possa adicionar sua rotina do
+              cotidiniano, excluir e editar.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> ReactJs e Styled-components
@@ -217,11 +217,12 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>Pokédex</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Projeto realizado consumindo a pokéAPI, para consultar várias
+              informações sobre pokémons.
             </S.Description>
             <S.TechnologiesUsed>
-              <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
+              <S.Span>Técnologias usadas:</S.Span> ReactJs e Styled-components
+              (CSS-in-JS).
             </S.TechnologiesUsed>
             <S.Links>
               <S.Link
@@ -245,8 +246,8 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>Advice generator</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, aonde o usuario
-              possa ter dicas diversas.
+              Projeto realizado consumindo uma API de conselhos, para obter
+              dicas diversas.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.

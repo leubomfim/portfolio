@@ -32,7 +32,7 @@ export const SectionName = styled.h2`
 export const Projects = styled.div`
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, 500px);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 500px));
   gap: 50px;
 `;
 
@@ -45,17 +45,22 @@ export const ProjectCardAndImage = styled.div`
   &:hover {
     transform: scale(1.18);
   };
-`;
+  `;
 
 export const ProjectImage = styled.img`
   width: 100%;
   height: 300px;
+
+  @media screen and (max-width: 600px) {
+    height: 200px;
+  }
 `;
 
 export const ProjectCard = styled.div`
   padding: 10px;
   background-color: #222;
   border-left: 1px solid #c4c4c4;
+  height: 196px;
 `;
 
 export const ProjectName = styled.h3`

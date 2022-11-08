@@ -7,15 +7,17 @@ import { Home } from './Pages/Home';
 
 export const PagesRoutes = () => {
   return (
-    <Router>
-      <PortProvider>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-        </Routes>
-        <Footer />
-        <GoTop />
-      </PortProvider>
-    </Router>
+    <>
+      <Router>
+        <PortProvider>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+          </Routes>
+          <Footer />
+          <GoTop />
+        </PortProvider>
+      </Router>
+    </>
   );
 };

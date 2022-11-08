@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  ${() => css`
+  ${({ menu }) => css`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
   * {
@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    ${menu ? 'overflow: hidden;' : 'overflow: auto;'}
     font-family: 'Poppins', sans-serif;
     background-color: #151515;
     &::-webkit-scrollbar {

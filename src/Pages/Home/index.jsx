@@ -3,8 +3,12 @@ import logo from '../../images/leo_photo.jpeg';
 import { Skills } from '../../components/Skills';
 import { Projects } from '../../components/Projects';
 import { AboutMe } from '../../components/AboutMe';
+import {} from './';
+import { GlobalStyles } from './global-styles';
+import { usePortContext } from '../../contexts/context';
 
 export const Home = () => {
+  const { menu } = usePortContext();
   return (
     <>
       <S.Section id="home">
@@ -40,20 +44,21 @@ export const Home = () => {
           <AboutMe />
         </S.Container>
       </S.Section>
-      <S.Section id="skills">
+      <S.SkillsSection id="skills">
         <S.Container>
           <Skills />
         </S.Container>
-      </S.Section>
+      </S.SkillsSection>
 
-      <S.Section
+      <S.ProjectsSection
         style={{ height: 'auto', marginBottom: '100px' }}
         id="projects"
       >
         <S.Container style={{ maxWidth: '90%' }}>
           <Projects />
         </S.Container>
-      </S.Section>
+      </S.ProjectsSection>
+      <GlobalStyles menu={menu} />
     </>
   );
 };

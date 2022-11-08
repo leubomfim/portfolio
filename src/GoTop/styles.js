@@ -1,13 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.a`
+  ${({ menu }) => css`
+    ${
+      !menu
+        ? `color: #222;
+      background-color: white;`
+        : `color: white;
+    background-color: #222;
+    `
+    }
+  `}
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50px;
   height: 50px;
-  color: #222;
-  background-color: white;
   border-radius: 50%;
   position: fixed;
   bottom: 35px;

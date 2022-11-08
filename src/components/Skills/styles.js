@@ -81,6 +81,10 @@ export const Skill = styled.div`
   gap: 40px;
   width: 90%;
   max-width: 500px;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 export const MySkillInformation = styled.div`
@@ -91,6 +95,9 @@ export const MySkillInformation = styled.div`
 
 export const LanguageLogo = styled.img`
   width: 100px;
+  @media screen and (max-width: 400px) {
+    margin: 0 auto;
+  }
 `;
 
 export const LanguageName = styled.h3`
