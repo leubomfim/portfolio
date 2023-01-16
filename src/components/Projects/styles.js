@@ -60,7 +60,7 @@ export const ProjectCard = styled.div`
   padding: 10px;
   background-color: #222;
   border-left: 1px solid #c4c4c4;
-  height: 196px;
+  height: auto;
 `;
 
 export const ProjectName = styled.h3`

@@ -30,12 +30,37 @@ export const SectionName = styled.h2`
 `;
 
 export const AboutWrapper = styled.div`
-  width: 100%;
-  background-color: #222;
-  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  text-align: justify;
+
   & > p {
     color: white;
-    text-align: justify;
-    font-size: 20px;
+    font-size: 25px;
+    letter-spacing: 3px;
+    width: 600px;
+    line-height: 1.2;
+
+    @media (max-width: 900px) {
+      letter-spacing: none;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+ `;
+
+export const Photo = styled.img`
+  width: 250px;
+  border-radius: 3px;
+  transition: all 300ms ease-in-out;
+  border-radius: 50%;
+
+  &:hover {
+    transform: scale(1.1);
   }
 `;

@@ -22,6 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     ${menu ? 'overflow: hidden;' : 'overflow: auto;'}
     font-family: 'Poppins', sans-serif;
     background-color: #151515;
+    overflow-x: hidden;
     &::-webkit-scrollbar {
       width: 5px;
     }
@@ -35,6 +36,10 @@ export const GlobalStyles = createGlobalStyle`
   button, input, select {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+  }
+
+  .area-1, .area-2, .area-3, .area-4 {
+    visibility: hidden;
   }
 `}
 `;

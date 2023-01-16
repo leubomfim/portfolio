@@ -8,6 +8,7 @@ export const Header = styled.header`
   top: 0;
   width: 100%;
   z-index: 5;
+  opacity: 0.9;
 `;
 
 export const Container = styled.div`
@@ -29,10 +30,12 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
 export const HeaderTitle = styled.h1`
-  color: #c4c4c4;
+  color: #fff;
   font-size: 25px;
   font-weight: 400;
   position: relative;
@@ -79,7 +82,7 @@ export const HeaderList = styled.li`
 
   & > a {
     padding: 5px;
-    color: #c4c4c4;
+    color: #fff;
     position: relative;
     transition: all 300ms ease-in-out;
     font-size: 20px;
@@ -134,6 +137,7 @@ export const MenuMobile = styled.div`
     z-index: 499;
     justify-content: center;
     align-items: center;
+    opacity: 1;
   `}
 `;
 
@@ -169,10 +173,10 @@ export const HeaderMenuList = styled.li`
 
   & > a {
     padding: 5px;
-    color: #222;
+    color: black;
     position: relative;
     transition: all 300ms ease-in-out;
-    font-size: 20px;
+    font-size: 24px;
     z-index: 2;
   };
 

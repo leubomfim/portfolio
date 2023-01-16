@@ -8,6 +8,9 @@ import gitFinderReact from '../../images/git.png';
 import gitFinder from '../../images/react-git.png';
 import toDo from '../../images/to-do.png';
 import lasless from '../../images/laslessVPN.png';
+import rick from '../../images/rick.png';
+import project from '../../images/project.png';
+import movies from '../../images/movies.png';
 
 export const Projects = () => {
   return (
@@ -246,8 +249,8 @@ export const Projects = () => {
           <S.ProjectCard>
             <S.ProjectName>Advice generator</S.ProjectName>
             <S.Description>
-              Projeto realizado consumindo uma API de conselhos, para obter
-              dicas diversas.
+              Projeto feito consumindo uma API de conselhos, para obter dicas
+              diversas.
             </S.Description>
             <S.TechnologiesUsed>
               <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
@@ -262,6 +265,90 @@ export const Projects = () => {
               <S.Link
                 target="_blank"
                 href="https://github.com/leubomfim/advice-generator-app"
+              >
+                Github
+              </S.Link>
+            </S.Links>
+          </S.ProjectCard>
+        </S.ProjectCardAndImage>
+
+        <S.ProjectCardAndImage>
+          <S.ProjectImage src={movies} />
+          <S.ProjectCard>
+            <S.ProjectName>Movies App</S.ProjectName>
+            <S.Description>
+              Projeto feito consumindo a API da TMDB, para consulta informações
+              sobre filmes e séries..
+            </S.Description>
+            <S.TechnologiesUsed>
+              <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
+            </S.TechnologiesUsed>
+            <S.Links>
+              <S.Link
+                target="_blank"
+                href="https://movies-project-taupe.vercel.app/"
+              >
+                Site
+              </S.Link>
+              <S.Link
+                target="_blank"
+                href="https://github.com/leubomfim/movies-project"
+              >
+                Github
+              </S.Link>
+            </S.Links>
+          </S.ProjectCard>
+        </S.ProjectCardAndImage>
+
+        <S.ProjectCardAndImage>
+          <S.ProjectImage src={rick} />
+          <S.ProjectCard>
+            <S.ProjectName>Rick and morty - App</S.ProjectName>
+            <S.Description>
+              Projeto feito consumindo a API, podendo acessar informações sobre
+              episodios, personagens e localizações.
+            </S.Description>
+            <S.TechnologiesUsed>
+              <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
+            </S.TechnologiesUsed>
+            <S.Links>
+              <S.Link
+                target="_blank"
+                href="https://rick-and-morty-api-leubomfim.vercel.app/"
+              >
+                Site
+              </S.Link>
+              <S.Link
+                target="_blank"
+                href="https://github.com/leubomfim/rick-and-morty-api"
+              >
+                Github
+              </S.Link>
+            </S.Links>
+          </S.ProjectCard>
+        </S.ProjectCardAndImage>
+
+        <S.ProjectCardAndImage>
+          <S.ProjectImage src={project} />
+          <S.ProjectCard>
+            <S.ProjectName>Projects App</S.ProjectName>
+            <S.Description>
+              Um projeto util para o usuário adicionar seus projetos, editar e
+              exclui-los, etc.
+            </S.Description>
+            <S.TechnologiesUsed>
+              <S.Span>Técnologias usadas:</S.Span> HTML, CSS e Javascript.
+            </S.TechnologiesUsed>
+            <S.Links>
+              <S.Link
+                target="_blank"
+                href="https://project-test-topaz.vercel.app/"
+              >
+                Site
+              </S.Link>
+              <S.Link
+                target="_blank"
+                href="https://github.com/leubomfim/project-test"
               >
                 Github
               </S.Link>

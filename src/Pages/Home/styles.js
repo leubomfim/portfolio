@@ -13,7 +13,7 @@ export const SkillsSection = styled.section`
   display:flex;
   align-items: center;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 425px) {
     margin-top: 280px;
   }
   `;
@@ -28,7 +28,7 @@ export const ProjectsSection = styled.section`
     margin-top: 50px;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 425px) {
     margin-top: 320px;
   }
 `;
@@ -59,19 +59,21 @@ export const DisplayProfile = styled.div`
   }
 `;
 
-export const Photo = styled.img`
-  width: 250px;
-  border-radius: 3px;
-  transition: all 300ms ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
+export const Bg = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  & > img {
+    width: 100%;
+    height: 100%;
   }
 `;
 
 export const SectionProfileWrapper = styled.div`
   display: flex;
-  width: 450px;
+  width: auto;
   flex-direction: column;
   gap: 10px;
 
@@ -86,20 +88,21 @@ export const SectionsTitle = styled.h2`
 
 export const HeadingTwo = styled.h2`
   color: white;
-  font-size: 18px;
-  text-transform: uppercase;
+  font-size: 32px;
   font-weight: 400;
+  text-align: center;
 `;
 
 export const SpanName = styled.span`
   color: white;
-  font-size: 25px;
-  letter-spacing: 3px;
+  font-size: 38px;
+  letter-spacing: 4px;
   text-transform: uppercase;
   position: relative;
   transition: all 300ms ease-in-out;
   z-index: 2;
-  width: 295px;
+  width: auto;
+  text-align: center;
   cursor: default;
 
   &::before {
@@ -125,6 +128,7 @@ export const SpanName = styled.span`
 
 export const LinksArea = styled.div`
   display: flex;
+  justify-content: center;
   gap: 25px;
 
   @media screen and (max-width: 600px) {

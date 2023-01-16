@@ -1,21 +1,17 @@
 import * as S from './styles';
+import logo from '../../images/leo_photo.jpeg';
+
 export const AboutMe = () => {
   return (
     <>
       <S.SectionName>Sobre mim</S.SectionName>
       <S.AboutWrapper>
         <p>
-          Olá, sou de Guarulhos-SP, Desenvolvedor Front-end focado em buscar a
-          melhor experiência para o usuário com tecnologias atuais, entre elas:
-          ReactJs, Javascript e CSS in JS, e busco desafios que eu possa
-          colaborar com meus conhecimentos e me desenvolver com softs e hards
-          skills. Ingressei na tecnologia há 9 meses por mentoria e alguns meses
-          já me sinto preparado para seguir meu caminho profissional e de
-          estudos, atualmente aprimorando meu conhecimento em HTML5, CSS3,
-          Javacript, ReactJs, Styled-components, Git, Jest. Meu objetivo é me
-          tornar uma referência como desenvolvedor front-end, e passar
-          conhecimentos para outras pessoas.
+          Me chamo Leonardo Bomfim, tenho 20 anos. Sou um Desenvolvedor
+          Front-end em busca de minha primeira oportunidade na área. Focado em
+          fazer projetos e aprimorar meu conhecimentos em softs e hards skills.
         </p>
+        <S.Photo src={logo} alt="Leonardo profile photo" />
       </S.AboutWrapper>
     </>
   );
