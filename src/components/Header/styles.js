@@ -1,29 +1,26 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
-export const Header = styled.header`
-  padding: 30px 0;
-  background-color: #222;
-  border-bottom: 2px solid #272727;
+export const Header = styled(motion.header)`
+  padding: 2rem 0;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 5;
-  opacity: 0.9;
+  z-index: 100;
+  transition: all 0.3s ease;
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
   width: 100%;
-  max-width: 1024px;
-
-
-  @media screen and (max-width: 1025px) {
-    width: 90%;
-  }
-
-  @media screen and (max-width: 900px) {
-    width: 85%;
-  }
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -31,172 +28,108 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
 `;
 
-export const HeaderTitle = styled.h1`
-  color: #fff;
-  font-size: 25px;
-  font-weight: 400;
-  position: relative;
-  transition: all 300ms ease-in-out;
-  z-index: 2;
-  cursor: default;
-
-  &::before {
-    content: '';
-    background: white;
-    position: absolute;
-    left: -4px;
-    bottom: 0;
-    width: 0px;
-    height: 100%;
-    transition: all 300ms ease-in-out;
-    z-index: -1;
-  };
-
-  &:hover::before {
-    width: 110%;
-  };
-
-  &:hover {
-    color: rgb(61, 61, 61);
-    transform: scale(1.2);
-  };
+export const HeaderTitle = styled(motion.h1)`
+  color: var(--text-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
 `;
 
 export const HeaderNav = styled.nav`
-
+  display: flex;
+  align-items: center;
 `;
 
 export const HeaderUl = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 3rem;
+  align-items: center;
 `;
 
-export const HeaderList = styled.li`
-  transition: all 300ms ease-in-out;
-  &:hover {
-    transform: scale(1.2);
-  }
-
+export const HeaderList = styled(motion.li)`
   & > a {
-    padding: 5px;
-    color: #fff;
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
     position: relative;
-    transition: all 300ms ease-in-out;
-    font-size: 20px;
-    z-index: 2;
-  };
 
-  & > a::before {
-    content: '';
-    background: white;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0px;
-    height: 100%;
-    transition: all 300ms ease-in-out;
-    z-index: -1;
-  };
+    &:hover {
+      color: var(--primary-color);
+    }
 
-  & > a:hover::before {
-    width: 100%;
-  };
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;
+    }
 
-  & > a:hover {
-    color: rgb(61, 61, 61);
-  };
-`;
-
-export const MenuIcon = styled.button`
-  background-color: transparent;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  z-index: 500;
-  ${({ menu }) => css`
-    & > svg {
-    ${!menu ? 'color: #c4c4c4;' : 'color: #222;'}
-    z-index: 500;
-    font-size: 30px;
+    &:hover::after {
+      width: 100%;
+    }
   }
-  `}
 `;
 
-export const MenuMobile = styled.div`
-  ${({ menu }) => css`
-    ${!menu ? 'display: none;' : 'display: flex;'}
-    position: absolute;
-    width: 75%;
-    background-color: white;
-    height: 100vh;
-    right: 0;
-    top: 0;
-    z-index: 499;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-  `}
+export const MenuIcon = styled(motion.button)`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > svg {
+    color: var(--text-color);
+    font-size: 2.4rem;
+  }
 `;
 
-export const MenuMobileWrapper = styled.div`
-
-`;
-
-export const MenuBackground = styled.div`
-  ${({ menu }) => css`
-    ${!menu ? 'display: none;' : 'display: block;'}
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.438);
-    height: 100vh;
-    z-index: 496;
-  `}
+export const MenuMobile = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 `;
 
 export const HeaderMenuUl = styled.ul`
   display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 80px;
+  align-items: center;
+  gap: 4rem;
 `;
 
-export const HeaderMenuList = styled.li`
-  transition: all 300ms ease-in-out;
-  &:hover {
-    transform: scale(1.2);
-  }
-
+export const HeaderMenuList = styled(motion.li)`
   & > a {
-    padding: 5px;
-    color: black;
-    position: relative;
-    transition: all 300ms ease-in-out;
-    font-size: 24px;
-    z-index: 2;
-  };
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
 
-  & > a::before {
-    content: '';
-    background: white;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0px;
-    height: 100%;
-    transition: all 300ms ease-in-out;
-    z-index: -1;
-  };
-
-  & > a:hover::before {
-    width: 100%;
-  };
-
-  & > a:hover {
-    color: rgb(61, 61, 61);
-  };
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
 `;

@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { MdOutlineKeyboardArrowUp } from 'react-icons/md';
-import { usePortContext } from '../contexts/context';
-import * as S from './styles';
+import { useEffect } from "react";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { usePortContext } from "../contexts/context";
+import * as S from "./styles";
 
 export const GoTop = () => {
   const { menu, setMenu, width } = usePortContext();

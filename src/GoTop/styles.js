@@ -1,15 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Container = styled.a`
   ${({ menu }) => css`
-    ${
-      !menu
-        ? `color: #222;
+    ${!menu
+      ? `color: #222;
       background-color: white;`
-        : `color: white;
+      : `color: white;
     background-color: #222;
-    `
-    }
+    `}
   `}
   display: flex;
   justify-content: center;
@@ -26,5 +24,5 @@ export const Container = styled.a`
 
   &:hover {
     transform: scale(1.2);
-  };
+  }
 `;

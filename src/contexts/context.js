@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from 'react';
-import P from 'prop-types';
-import { useEffect } from 'react';
+import { createContext, useContext, useState } from "react";
+import P from "prop-types";
+import { useEffect } from "react";
 
 export const PortContext = createContext();
 
@@ -13,10 +13,10 @@ export const PortProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', detectWidth);
+    window.addEventListener("resize", detectWidth);
 
     return () => {
-      window.removeEventListener('resize', detectWidth);
+      window.removeEventListener("resize", detectWidth);
     };
   }, [width]);
 
@@ -35,7 +35,7 @@ export const usePortContext = () => {
   const context = useContext(PortContext);
   if (context === undefined) {
     throw new Error(
-      'useCheckoutContext must be used within a CheckoutProvider',
+      "useCheckoutContext must be used within a CheckoutProvider"
     );
   }
   return context;

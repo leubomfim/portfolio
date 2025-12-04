@@ -1,28 +1,30 @@
-import * as S from './styles';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import * as S from "./styles";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
     <S.Footer>
       <S.FooterInfo>
-        <S.FooterName>Feito por Leonardo Bomfim</S.FooterName>
+        <S.FooterName>{"<LSBS/>"}</S.FooterName>
         <S.FooterP>
-          <S.FooterSpan>Contato:</S.FooterSpan> leosoares.me@gmail.com
+          Desenvolvido por <S.FooterSpan>Leonardo Bomfim</S.FooterSpan>
         </S.FooterP>
         <S.LinksFooter>
           <S.Link
             href="https://github.com/leubomfim"
-            linkedin={false}
             target="_blank"
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <AiFillGithub />
+            <FaGithub />
           </S.Link>
           <S.Link
-            linkedin={true}
             href="https://www.linkedin.com/in/leonardo-bomfim-9a8a0723b/"
             target="_blank"
+            whileHover={{ scale: 1.2, rotate: -5 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <AiFillLinkedin />
+            <FaLinkedin />
           </S.Link>
         </S.LinksFooter>
       </S.FooterInfo>

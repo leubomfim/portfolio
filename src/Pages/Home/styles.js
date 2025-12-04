@@ -1,164 +1,170 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
 export const Section = styled.section`
-  display: flex;
-  height: 100vh;
-  display:flex;
-  align-items: center;
-`;
-
-export const SkillsSection = styled.section`
-  display: flex;
-  height: 100vh;
-  display:flex;
-  align-items: center;
-
-  @media screen and (max-width: 425px) {
-    margin-top: 280px;
-  }
-  `;
-
-export const ProjectsSection = styled.section`
-  display: flex;
-  margin-bottom: 100px;
-  display:flex;
-  align-items: center;
-
-  @media screen and (max-width: 600px) {
-    margin-top: 50px;
-  }
-
-  @media screen and (max-width: 425px) {
-    margin-top: 320px;
-  }
-`;
-
-export const Container = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1024px;
-
-
-  @media screen and (max-width: 1025px) {
-    width: 90%;
-  }
-
-  @media screen and (max-width: 900px) {
-    width: 85%;
-  }
-`;
-
-export const DisplayProfile = styled.div`
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px; /* Header height */
+`;
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-  }
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 1;
 `;
 
 export const Bg = styled.div`
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1000;
-  & > img {
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-export const SectionProfileWrapper = styled.div`
-  display: flex;
-  width: auto;
-  flex-direction: column;
-  gap: 10px;
-
-  @media screen and (max-width: 600px) {
-    width: 300px;
-  }
-`;
-
-export const SectionsTitle = styled.h2`
-  color: white;
-`;
-
-export const HeadingTwo = styled.h2`
-  color: white;
-  font-size: 32px;
-  font-weight: 400;
-  text-align: center;
-`;
-
-export const SpanName = styled.span`
-  color: white;
-  font-size: 38px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  position: relative;
-  transition: all 300ms ease-in-out;
-  z-index: 2;
-  width: auto;
-  text-align: center;
-  cursor: default;
+  z-index: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(99, 102, 241, 0.15) 0%,
+    rgba(10, 10, 10, 0) 50%
+  );
 
   &::before {
-    content: '';
-    background: white;
+    content: "";
     position: absolute;
-    left: -4px;
-    bottom: 0;
-    width: 0px;
-    height: 100%;
-    transition: all 300ms ease-in-out;
-    z-index: -1;
-  };
-
-  &:hover::before {
+    top: 0;
+    left: 0;
     width: 100%;
-  };
-
-  &:hover {
-    color: rgb(61, 61, 61);
-  };
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
 `;
 
-export const LinksArea = styled.div`
+export const DisplayProfile = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+`;
 
-  @media screen and (max-width: 600px) {
-    justify-content: center;
+export const SectionProfileWrapper = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+`;
+
+export const HeadingTwo = styled(motion.h2)`
+  color: var(--text-secondary);
+  font-size: 2.4rem;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 3.2rem;
   }
-  `;
+`;
 
-export const Link = styled.a`
-  ${({ linkedin }) => css`
-    ${linkedin ? 'border: 2px solid #0A66C2;' : 'border: 2px solid white;'}
-    ${
-      linkedin
-        ? `&:hover {
-    background-color: #518bc45b;
-  };`
-        : `&:hover {
-    border: 2px solid gray;
-    background-color: rgba(255, 255, 255, 0.158);
-  };`
-    }
-    display: flex;
-    gap: 20px;
-    border-radius: 10px;
-    padding: 12px 35px;
-    color: white;
-    background-color: transparent;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: all 300ms ease-in-out;
-  `};
+export const SpanName = styled(motion.h1)`
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(to right, #fff, var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
 
+  @media (min-width: 768px) {
+    font-size: 8rem;
+  }
+`;
 
+export const RoleText = styled(motion.h3)`
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+  }
+`;
+
+export const LinksArea = styled(motion.div)`
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+`;
+
+export const Link = styled(motion.a)`
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  ${({ primary }) =>
+    primary
+      ? css`
+          background: var(--primary-color);
+          color: white;
+          box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+
+          &:hover {
+            background: #5558e6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+          }
+        `
+      : css`
+          background: rgba(255, 255, 255, 0.05);
+          color: var(--text-color);
+          border: 1px solid var(--glass-border);
+          backdrop-filter: blur(10px);
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            border-color: var(--text-secondary);
+          }
+        `}
+`;
+
+export const SkillsSection = styled.section`
+  padding: 10rem 0;
+  position: relative;
+`;
+
+export const ProjectsSection = styled.section`
+  padding: 10rem 0;
+  position: relative;
+`;
+
+export const ScrollIndicator = styled(motion.div)`
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
+  }
 `;

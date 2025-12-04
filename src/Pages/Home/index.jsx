@@ -1,82 +1,101 @@
-import * as S from './styles';
-import { Skills } from '../../components/Skills';
-import { Projects } from '../../components/Projects';
-import { AboutMe } from '../../components/AboutMe';
-import {} from './';
-import { GlobalStyles } from './global-styles';
-import { usePortContext } from '../../contexts/context';
-import ScrollReveal from 'scrollreveal';
-import { useEffect } from 'react';
-import gif from '../../images/bg.gif';
+import * as S from "./styles";
+import { Skills } from "../../components/Skills";
+import { Projects } from "../../components/Projects";
+import { AboutMe } from "../../components/AboutMe";
+import { GlobalStyles } from "./global-styles";
+import { usePortContext } from "../../contexts/context";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Home = () => {
   const { menu } = usePortContext();
 
-  useEffect(() => {
-    ScrollReveal({
-      duration: 1500,
-      reset: true,
-      easing: 'ease',
-    });
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-    ScrollReveal().reveal('.area-1', { origin: 'left' });
-    ScrollReveal().reveal('.area-2', { origin: 'right' });
-    ScrollReveal().reveal('.area-3', { origin: 'left' });
-    ScrollReveal().reveal('.area-4', { origin: 'right' });
-  }, []);
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
-      <S.Section style={{ position: 'relative' }} id="home">
-        <S.Bg>
-          <img src={gif} alt="Universe with stars background" />
-        </S.Bg>
-        <S.Container className="area-1">
+      <GlobalStyles menu={menu} />
+      <S.Section id="home">
+        <S.Bg />
+        <S.Container>
           <S.DisplayProfile>
-            <S.SectionProfileWrapper>
-              <S.HeadingTwo>Olá, meu nome é</S.HeadingTwo>
-              <S.SpanName>Leonardo Bomfim </S.SpanName>
-              <S.HeadingTwo>Desenvolvedor Front-end.</S.HeadingTwo>
-              <S.LinksArea>
-                <S.Link
-                  linkedin={false}
-                  href="https://github.com/leubomfim"
-                  target="_blank"
-                >
+            <S.SectionProfileWrapper
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <S.HeadingTwo variants={itemVariants}>
+                Olá, meu nome é
+              </S.HeadingTwo>
+              <S.SpanName variants={itemVariants}>Leonardo Bomfim</S.SpanName>
+              <S.RoleText variants={itemVariants}>
+                Desenvolvedor Front-end
+              </S.RoleText>
+
+              <S.LinksArea variants={itemVariants}>
+                <S.Link href="https://github.com/leubomfim" target="_blank">
+                  <FaGithub size={20} />
                   GitHub
                 </S.Link>
                 <S.Link
                   href="https://www.linkedin.com/in/leonardo-bomfim-9a8a0723b/"
-                  linkedin={true}
                   target="_blank"
+                  primary="true"
                 >
+                  <FaLinkedin size={20} />
                   Linkedin
                 </S.Link>
               </S.LinksArea>
             </S.SectionProfileWrapper>
           </S.DisplayProfile>
+
+          <S.ScrollIndicator
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
+            Scroll Down
+          </S.ScrollIndicator>
         </S.Container>
       </S.Section>
-      <S.Section id="about_me">
-        <S.Container className="area-2">
+
+      <S.Section
+        id="about_me"
+        style={{ minHeight: "auto", padding: "10rem 0" }}
+      >
+        <S.Container>
           <AboutMe />
         </S.Container>
       </S.Section>
+
       <S.SkillsSection id="skills">
-        <S.Container className="area-3">
+        <S.Container>
           <Skills />
         </S.Container>
       </S.SkillsSection>
 
-      <S.ProjectsSection
-        style={{ height: 'auto', marginBottom: '100px' }}
-        id="projects"
-      >
-        <S.Container className="area-4" style={{ maxWidth: '90%' }}>
+      <S.ProjectsSection id="projects">
+        <S.Container>
           <Projects />
         </S.Container>
       </S.ProjectsSection>
-      <GlobalStyles menu={menu} />
     </>
   );
 };
