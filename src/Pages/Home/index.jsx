@@ -4,7 +4,6 @@ import { Projects } from "../../components/Projects";
 import { AboutMe } from "../../components/AboutMe";
 import { GlobalStyles } from "./global-styles";
 import { usePortContext } from "../../contexts/context";
-import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Home = () => {
